@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 88137e8035fc2d34397d4accb4ac5c8d
-timeCreated: 1542074116
+timeCreated: 1542079543
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,6 +9,21 @@ TextureImporter:
     21300004: t_dang01_2
     21300006: t_dang01_3
     21300008: t_dang01_4
+    21300010: t_dang01_5
+    21300012: t_dang01_6
+    21300014: t_dang01_7
+    21300016: t_dang01_8
+    21300018: t_dang01_9
+    21300020: t_dang01_10
+    21300022: t_dang01_11
+    21300024: t_dang01_12
+    21300026: t_dang01_13
+    21300028: t_dang01_14
+    21300030: t_dang01_15
+    21300032: t_dang01_16
+    21300034: t_dang01_17
+    21300036: t_dang01_18
+    21300038: t_dang01_19
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
