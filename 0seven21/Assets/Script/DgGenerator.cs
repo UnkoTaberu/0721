@@ -46,6 +46,7 @@ public class DgGenerator : MonoBehaviour
     /// 2次元配列情報
     /// </summary>
     Layer2D _layer = null;
+    Layer2D _items = null;
     /// <summary>
     /// 区画リスト
     /// </summary>
@@ -77,6 +78,7 @@ public class DgGenerator : MonoBehaviour
         // ■1. 初期化
         // 2次元配列初期化
         _layer = new Layer2D(WIDTH, HEIGHT);
+        _items = new Layer2D(WIDTH, HEIGHT);
 
         // 区画リスト作成
         _divList = new List<DgDivision>();
@@ -132,6 +134,23 @@ public class DgGenerator : MonoBehaviour
                     float y = GetChipY(j);
                     Util.CreateToken(x, y, "ground", "", "ground");
                 }
+            }
+        }
+
+        // アイテムを配置
+        for (int j = 0; j < _layer.Height; j++)
+        {
+            for (int i = 0; i < _layer.Width; i++)
+            {
+                if (_layer.Get(i, j) == CHIP_NONE)
+                {
+                    _items.Set(i, j, 3);
+                    break;
+                }
+            }
+            if(_items.Get(i, j) == 3)
+            {
+                break;
             }
         }
 
