@@ -119,7 +119,22 @@ public class DgGenerator : MonoBehaviour
                 }
             }
         }
-        
+
+        // 地面を配置
+        for (int j = 0; j < _layer.Height; j++)
+        {
+            for (int i = 0; i < _layer.Width; i++)
+            {
+                if (_layer.Get(i, j) == CHIP_NONE)
+                {
+                    // 地面生成
+                    float x = GetChipX(i);
+                    float y = GetChipY(j);
+                    Util.CreateToken(x, y, "ground", "", "ground");
+                }
+            }
+        }
+
     }
 
     /// <summary>
