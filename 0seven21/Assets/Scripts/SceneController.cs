@@ -43,11 +43,15 @@ public class SceneController : MonoBehaviour
         {
             for (var y = 0; y < generator.height; y++)
             {
+
                 var tile = map[x, y] == 1 ? Instantiate(floorPrefab) : Instantiate(wallPrefab);
                 tile.transform.SetParent(tileContainer);
                 tile.transform.localPosition = new Vector2(x, y);
+
             }
         }
+
+        
 
         wallPrefab.gameObject.SetActive(false);
         floorPrefab.gameObject.SetActive(false);
