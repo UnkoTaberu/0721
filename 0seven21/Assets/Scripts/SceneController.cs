@@ -12,6 +12,8 @@ public class SceneController : MonoBehaviour
     [SerializeField]
     Transform tileContainer;
     [SerializeField]
+    Transform ItemtileContainer;
+    [SerializeField]
     GameObject wallPrefab;
     [SerializeField]
     GameObject floorPrefab;
@@ -67,9 +69,9 @@ public class SceneController : MonoBehaviour
                 // test
                 if (itemmap[x, y] == 3)
                 {
-                    tile = Instantiate(item);
-                    tile.transform.SetParent(tileContainer);
-                    tile.transform.localPosition = new Vector2(x, y);
+                    var tile2 = Instantiate(item);
+                    tile2.transform.SetParent(ItemtileContainer);
+                    tile2.transform.localPosition = new Vector2(x, y);
                 }
             }
         }

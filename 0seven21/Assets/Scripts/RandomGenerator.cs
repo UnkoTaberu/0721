@@ -10,13 +10,13 @@ public class RandomGenerator : MonoBehaviour {
     public int[,] ItemGenerate(int[,] itemmap)
     {
         int x = 0, y = 0, i = 0;
+        
 
-        System.Random rx = new System.Random(generator.width);
-        System.Random ry = new System.Random(generator.height);
-
-        while (i != 10)
+        while (i != 15)
         {
-            if(itemmap[x = rx.Next(generator.width), y = ry.Next(generator.height)] == 1)
+            System.Random rx = new System.Random();
+            System.Random ry = new System.Random(rx.Next());
+            if (itemmap[x = rx.Next(generator.width), y = ry.Next(generator.height)] == 1)
             {
                 itemmap[x, y] = 3;
                 i++;
