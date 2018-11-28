@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        //rigidbodyCache.AddForce(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * 10f);
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
             transform.Translate(-1, 0, 0);
