@@ -8,7 +8,11 @@ public class SceneController : MonoBehaviour
     [SerializeField]
     DungeonGenerator generator;
     [SerializeField]
+    RandomGenerator item_generator;
+    [SerializeField]
     Transform tileContainer;
+    [SerializeField]
+    Transform ItemtileContainer;
     [SerializeField]
     GameObject wallPrefab;
     [SerializeField]
@@ -17,6 +21,8 @@ public class SceneController : MonoBehaviour
     Player player;
     [SerializeField]
     Button regenerateButton;
+    [SerializeField]
+    GameObject item;
 
     void Start()
     {
@@ -35,8 +41,21 @@ public class SceneController : MonoBehaviour
         // ダンジョンマップを生成
         wallPrefab.gameObject.SetActive(true);
         floorPrefab.gameObject.SetActive(true);
+        item.gameObject.SetActive(true);
 
         var map = generator.Generate();
+
+        // アイテムマップを生成
+        int[,] itemmap = new int[generator.width,generator.height];
+        for(int x = 0;x != generator.width; x++)
+        {
+            for(int y = 0;y != generator.height; y++)
+            {
+                itemmap[x, y] = map[x, y];
+            }
+        }
+        item_generator.ItemGenerate(itemmap);
+        
 
         // マップを元にオブジェクト生成
         for (var x = 0; x < generator.width; x++)
@@ -48,6 +67,16 @@ public class SceneController : MonoBehaviour
                 tile.transform.SetParent(tileContainer);
                 tile.transform.localPosition = new Vector2(x, y);
 
+<<<<<<< HEAD
+=======
+                // test
+                if (itemmap[x, y] == 3)
+                {
+                    var tile2 = Instantiate(item);
+                    tile2.transform.SetParent(ItemtileContainer);
+                    tile2.transform.localPosition = new Vector2(x, y);
+                }
+>>>>>>> master
             }
         }
 
