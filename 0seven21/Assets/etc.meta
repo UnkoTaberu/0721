@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: afd4376006e279743a3889724e896727
 folderAsset: yes
 timeCreated: 1543377069
+=======
+guid: fe2cd267ef60e3441bb3af1c6823259b
+folderAsset: yes
+timeCreated: 1542686139
+>>>>>>> doukutu
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

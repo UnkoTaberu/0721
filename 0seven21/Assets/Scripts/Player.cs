@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+<<<<<<< HEAD
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
             transform.Translate(-1, 0, 0);
@@ -30,4 +31,9 @@ public class Player : MonoBehaviour
             transform.Translate(0, -1, 0);
         }
     }
+=======
+        rigidbodyCache.AddForce(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * 10f);
+
+     }
+>>>>>>> doukutu
 }
