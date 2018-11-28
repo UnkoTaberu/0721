@@ -444,17 +444,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 568363413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e85c3f1fe98be413a8bd4d024495e66f, type: 3}
+  m_Script: {fileID: 11500000, guid: cfcebfe3810d3004c8959fd9430505b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generator: {fileID: 568363415}
-  item_generator: {fileID: 568363417}
-  tileContainer: {fileID: 320492342}
-  wallPrefab: {fileID: 2071497721}
-  floorPrefab: {fileID: 1543185977}
-  player: {fileID: 990525232}
-  regenerateButton: {fileID: 1470456153}
-  item: {fileID: 952114996}
+  width: 30
+  height: 30
+  roomSettings:
+    minWidth: 4
+    minHeight: 4
+    bigRoomRate: 6
+    maxWallThicknessInArea: 5
 --- !u!114 &568363415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,16 +462,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 568363413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd32d0da4751e4e77b9f673fa11a6984, type: 3}
+  m_Script: {fileID: 11500000, guid: 498336885bc90d64f9acce427ef859fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 30
-  height: 30
-  roomSettings:
-    minWidth: 4
-    minHeight: 4
-    bigRoomRate: 5
-    maxWallThicknessInArea: 5
+  generator: {fileID: 568363414}
 --- !u!4 &568363416
 Transform:
   m_ObjectHideFlags: 0
@@ -494,10 +487,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 568363413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3460d01d1b7b9814f9aec9a48d288a06, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f97a72e965d58e4fbee6c55ba9c045b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generator: {fileID: 568363415}
+  generator: {fileID: 568363414}
+  item_generator: {fileID: 568363415}
+  tileContainer: {fileID: 320492342}
+  wallPrefab: {fileID: 2071497721}
+  floorPrefab: {fileID: 1543185977}
+  player: {fileID: 990525232}
+  regenerateButton: {fileID: 1470456153}
+  item: {fileID: 952114996}
 --- !u!1 &707010121
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,7 +806,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 990525231}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e05ba58233dab4a92b9f403768c2bcc0, type: 3}
+  m_Script: {fileID: 11500000, guid: 31edf1c78d9f70241851ed09bf083598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!50 &990525233
