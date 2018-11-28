@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< HEAD
+=======
     path: Assets/Title.unity
     guid: 90a01253dd90cc74aa979f90ca34f71a
   - enabled: 1
+>>>>>>> master
     path: Assets/startpokepoke.unity
     guid: c022ac591c453af43bec028d2a0909ac
   - enabled: 1

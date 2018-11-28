@@ -62,10 +62,13 @@ public class SceneController : MonoBehaviour
         {
             for (var y = 0; y < generator.height; y++)
             {
+
                 var tile = map[x, y] == 1 ? Instantiate(floorPrefab) : Instantiate(wallPrefab);
                 tile.transform.SetParent(tileContainer);
                 tile.transform.localPosition = new Vector2(x, y);
 
+<<<<<<< HEAD
+=======
                 // test
                 if (itemmap[x, y] == 3)
                 {
@@ -73,8 +76,11 @@ public class SceneController : MonoBehaviour
                     tile2.transform.SetParent(ItemtileContainer);
                     tile2.transform.localPosition = new Vector2(x, y);
                 }
+>>>>>>> master
             }
         }
+
+        
 
         wallPrefab.gameObject.SetActive(false);
         floorPrefab.gameObject.SetActive(false);
