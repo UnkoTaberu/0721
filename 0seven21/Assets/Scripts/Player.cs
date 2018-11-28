@@ -14,5 +14,6 @@ public class Player : MonoBehaviour
     void Update()
     {
         rigidbodyCache.AddForce(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * 10f);
-    }
+
+     }
 }

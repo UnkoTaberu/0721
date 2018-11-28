@@ -6,6 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class GameStart : MonoBehaviour
 {
+    void Update()
+    {
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            SceneManager.LoadScene("Main");
+        }
+
+    }
 
     // ★追加
     // 「public」を必ずつけること（ポイント）
