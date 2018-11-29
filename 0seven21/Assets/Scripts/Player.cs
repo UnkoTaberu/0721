@@ -7,29 +7,34 @@ public class Player : MonoBehaviour
     Rigidbody2D rigidbodyCache;
     [SerializeField]
     DungeonGenerator generator;
+    [SerializeField]
+    SceneController scontroller;
+
+    int x = 0, y = 0, z = 0;
 
     void Start()
     {
         rigidbodyCache = GetComponent<Rigidbody2D>();
+        
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
-            transform.Translate(-1, 0, 0);
+            WallFrag(-1, 0, 0);
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
-            transform.Translate(1, 0, 0);
+            WallFrag(1, 0, 0);
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
-            transform.Translate(0, 1, 0);
+            WallFrag(0, 1, 0);
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
-            transform.Translate(0, -1, 0);
+            WallFrag(0, -1, 0);
         }
     
     
@@ -37,12 +42,15 @@ public class Player : MonoBehaviour
 
      }
 
-    public void WallFlag(int[,] map)
+    public void WallFrag(int x2,int y2,int z2)
     {
-        int[,] wallmap = new int[generator.width,generator.height];
-        wallmap = map;
-
-
+        Vector3 tmp = GameObject.Find("Player").transform.position;
+        x = (int)tmp.x;
+        y = (int)tmp.y;
+        if(scontroller.map[x + x2,y + y2] != 0)
+        {
+            transform.Translate(x2, y2, z2);
+        }
     }
 
 

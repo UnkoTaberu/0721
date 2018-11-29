@@ -23,6 +23,9 @@ public class SceneController : MonoBehaviour
     Button regenerateButton;
     [SerializeField]
     GameObject item;
+    [SerializeField]
+
+    public int[,] map;
 
     void Start()
     {
@@ -43,7 +46,7 @@ public class SceneController : MonoBehaviour
         floorPrefab.gameObject.SetActive(true);
         item.gameObject.SetActive(true);
 
-        var map = generator.Generate();
+        map = generator.Generate();
 
         // アイテムマップを生成
         int[,] itemmap = new int[generator.width,generator.height];
