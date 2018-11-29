@@ -18,6 +18,9 @@ ExportedObj/
 *.booproj
 *.svd
 
+#Roslyn cache directories
+*.ide/
+
 # Unity3D generated meta files
 *.pidb.meta
 
