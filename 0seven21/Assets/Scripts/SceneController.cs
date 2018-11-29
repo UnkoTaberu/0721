@@ -26,6 +26,7 @@ public class SceneController : MonoBehaviour
     [SerializeField]
 
     public int[,] map;
+    public int[,] itemmap;
 
     void Start()
     {
@@ -49,7 +50,7 @@ public class SceneController : MonoBehaviour
         map = generator.Generate();
 
         // アイテムマップを生成
-        int[,] itemmap = new int[generator.width,generator.height];
+        itemmap = new int[generator.width,generator.height];
         for(int x = 0;x != generator.width; x++)
         {
             for(int y = 0;y != generator.height; y++)
