@@ -222,7 +222,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 369786607}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 240.5, y: 266.5, z: 0}
+  m_LocalPosition: {x: 481, y: 286, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1470456152}
@@ -810,6 +810,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31edf1c78d9f70241851ed09bf083598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  generator: {fileID: 568363414}
+  scontroller: {fileID: 568363417}
 --- !u!50 &990525233
 Rigidbody2D:
   serializedVersion: 4
@@ -1249,7 +1251,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1470456151}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -140.5, y: 231.5, z: 0}
+  m_LocalPosition: {x: -381, y: 251, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1242703393}
