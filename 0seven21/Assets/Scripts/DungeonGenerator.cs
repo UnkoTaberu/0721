@@ -13,7 +13,7 @@ public class DungeonGenerator : MonoBehaviour
     [SerializeField]
     RoomSettings roomSettings;
     [SerializeField]
-    RandomGenerator item_generator;
+    RandomGenerator r_generator;
     [SerializeField]
     Player player;
 
@@ -47,7 +47,11 @@ public class DungeonGenerator : MonoBehaviour
             map = area.WriteToMap(map);
         }
 
-        item_generator.ItemGenerate(map);
+        // アイテムを配置
+        r_generator.ItemGenerate(map);
+
+        // 階段を配置
+        r_generator.StepsGenerate(map);
 
         // プレイヤーを配置
         player.PlayerPut(map);
