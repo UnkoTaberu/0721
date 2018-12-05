@@ -12,6 +12,10 @@ public class DungeonGenerator : MonoBehaviour
     public int height;
     [SerializeField]
     RoomSettings roomSettings;
+    [SerializeField]
+    RandomGenerator r_generator;
+    [SerializeField]
+    Player player;
 
     [Serializable]
     public class RoomSettings
@@ -42,6 +46,16 @@ public class DungeonGenerator : MonoBehaviour
         {
             map = area.WriteToMap(map);
         }
+
+        // アイテムを配置
+        r_generator.ItemGenerate(map);
+
+        // 階段を配置
+        r_generator.StepsGenerate(map);
+
+        // プレイヤーを配置
+        player.PlayerPut(map);
+
         // Area同士を繋ぐ通路を作る
         var passages = GeneratePassagesByArea(dividedAreas);
         // 通路を描画

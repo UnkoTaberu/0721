@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    Rigidbody2D rigidbodyCache;
+    //Rigidbody2D rigidbodyCache;
     [SerializeField]
     DungeonGenerator generator;
     [SerializeField]
     SceneController scontroller;
 
-    int x = 0, y = 0, z = 0;
+    int x = 0, y = 0, i = 0;
 
     void Start()
     {
-        rigidbodyCache = GetComponent<Rigidbody2D>();
-        
+        //rigidbodyCache = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -50,6 +49,29 @@ public class Player : MonoBehaviour
         if(scontroller.map[x + x2,y + y2] != 0)
         {
             transform.Translate(x2, y2, z2);
+        }
+    }
+
+    public void PlayerPut(int[,] map)
+    {
+        //var floors = GameObject.FindGameObjectsWithTag("Floor");
+        //transform.position = floors[Random.Range(0, floors.Length)].transform.position;
+
+        while (i != 1)
+        {
+            System.Random ry = new System.Random();
+            System.Random rx = new System.Random(ry.Next());
+            if (map[x = rx.Next(generator.width), y = ry.Next(generator.height)] == 1)
+            {
+  //              transform.Translate(x,y,0);
+
+                Vector3 tmp = GameObject.Find("Player").transform.position;
+                tmp.x = x;
+                tmp.y = y;
+                transform.position = tmp;
+                i++;
+            }
+
         }
     }
 
