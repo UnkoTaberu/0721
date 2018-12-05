@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     DungeonGenerator generator;
     [SerializeField]
     SceneController scontroller;
+    [SerializeField]
+    RandomGenerator r_generator;
 
     int x = 0, y = 0, i = 0;
 
@@ -35,6 +37,10 @@ public class Player : MonoBehaviour
         {
             WallFrag(0, -1, 0);
         }
+
+        Vector3 tmp = GameObject.Find("Player").transform.position;
+    //    if(r_generator.itemmap[(int)tmp.x,(int)tmp.y] )
+        
     
     
      //   rigidbodyCache.AddForce(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * 10f);
